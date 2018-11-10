@@ -1,2 +1,2 @@
 # clickGame
-click game build with ReactJS
+click game built with ReactJS
