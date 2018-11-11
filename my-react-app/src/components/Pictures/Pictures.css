@@ -1,0 +1,22 @@
+.pictures {
+    background: rgb(231, 247, 7);
+    height: 150px;
+    margin: 1rem;
+    position: relative;
+    width: 280px;
+    box-shadow: 5px 2px 6px 6px rgb(177, 46, 46), 0 3px 6px rgb(197, 58, 58);
+    text-align: left;
+  }
+  
+   .image-container {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background:	#000000;
+  }
+img {
+    width: 80%;
+    height: 100%;
+  }
+  
+  
