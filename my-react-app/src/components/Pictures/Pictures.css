@@ -6,6 +6,11 @@
     width: 280px;
     box-shadow: 5px 2px 6px 6px rgb(177, 46, 46), 0 3px 6px rgb(197, 58, 58);
     text-align: left;
+    opacity: .85;
+  }
+  .pictures:hover {
+    opacity: 1;
+
   }
   
    .image-container {

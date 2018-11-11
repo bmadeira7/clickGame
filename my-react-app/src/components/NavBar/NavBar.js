@@ -5,7 +5,7 @@ import "./NavBar.css";
 const NavBar = props => (
   <nav className="bg-dark text-white">
     <ul>
-      <li className="title">Grime Kings Click Game</li>
+      <li className="title">🔊Garage Kings Click Game🔊</li>
       <li id="currentScore" className="scores">
         Current Score: {props.score}
       </li>
@@ -13,6 +13,7 @@ const NavBar = props => (
         Best Score: {props.bestScore}
       </li>
     </ul>
+    <h4 className="text-center pb-2 rules">Click on every UK Garage producer BUT don't click the same image twice!</h4>
   </nav>
 );
 

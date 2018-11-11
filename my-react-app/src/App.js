@@ -1,5 +1,6 @@
 //importing needed files
 import React from "react";
+import Music from "./components/Music/Music"
 import NavBar from "./components/NavBar";
 import Pictures from "./components/Pictures";
 import pictures from "./pictures.json";
@@ -11,6 +12,9 @@ class App extends React.Component {
     bestScore: 0,
     pictures
   };
+
+  
+
   //endGame is a function that:
   //                1.Will alert the user that the game is over and display their score for that round
   //                2.updates the state of bestScore if your current score is higher than your previous bestScore
@@ -38,6 +42,10 @@ class App extends React.Component {
           pictures[i].count += 1;
           this.setState({ score: this.state.score + 1 }, function() {
             console.log(this.state.score);
+            if (this.state.score === 9){
+                alert("CONGRATS - YOU WON!!!")
+                this.setState({ score: 0 });
+            }
           });
           this.state.pictures.sort(() => Math.random() - .42);
           return true;
@@ -49,25 +57,28 @@ class App extends React.Component {
   };
 // here we render the NavBar component & the Pictures component. 
 // the .map method is used to create a new pictures array and sets the values to each pictures object
+
   render() {
     return (
-      <div>
+        <div>
         <NavBar score={this.state.score} bestScore={this.state.bestScore} />
+        <Music></Music>
         <div className="container">
           <div className="row justify-content-center">
             {this.state.pictures.map(pictures => (
-              <Pictures
+                <Pictures
                 clickCount={this.clickCount}
                 id={pictures.id}
                 key={pictures.id}
                 image={pictures.image}
-              />
-            ))}
+                />
+                ))}
           </div>
         </div>
+       
       </div>
     );
-  }
+}
 }
 //exports everything above to index.js to be rendered to the DOM
 export default App;
